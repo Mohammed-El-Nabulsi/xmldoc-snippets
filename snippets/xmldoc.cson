@@ -1,0 +1,110 @@
+# Atom XML-Doc snippets intended for C#.
+
+# XML Doc documentation:   https://msdn.microsoft.com/de-de/library/b2s063f7(v=vs.71).aspx
+# XML Doc examples:        https://msdn.microsoft.com/en-us/library/b2s063f7(v=VS.100).aspx
+
+# Remarks:
+# This does not support lists and includes.
+
+'.source.cs':
+  # Modular snippets:
+  'XML Doc Summary':
+    'prefix': '///s'
+    'body': '''
+      /// <summary>
+      /// ${1:General description}
+      /// </summary>$2
+    '''
+
+  'XML Doc Remarks':
+    'prefix': '///re'
+    'body': '''
+      /// <remarks>
+      /// ${1:Detailed remarks}
+      /// </remarks>$2
+    '''
+
+  'XML Doc Return Value':
+    'prefix': '///r'
+    'body': '''
+      /// <returns>
+      /// ${1:Return value description}
+      /// </returns>$2
+    '''
+
+  'XML Doc Params':
+    'prefix': '///pa'
+    'body': '/// <param name="${1:Param name}">${2:Param description}</param>$3'
+
+  'XML Doc Seealso':
+    'prefix': '///sea'
+    'body': '''
+      /// <seealso cref="${1:Ref name}">
+      /// ${2:Ref description}
+      /// </seealso>$3
+    '''
+
+  'XML Doc Example':
+    'prefix': '///e'
+    'body': '''
+      /// <example>
+      /// ${1:Example description}
+      /// <code>
+      /// ${2:Code}
+      /// </code>
+      /// </example>$3
+    '''
+
+  'XML Doc Exception':
+    'prefix': '///ex'
+    'body': '/// <exception cref="${1:Exception type}">Thrown when ${2:condition}</exception>$3'
+
+  # Inline snippets:
+  'XML Doc See':
+    'prefix': 'see'
+    'body': '<see cref="${1:Ref name}"/>$2'
+
+  'XML Doc Paramref':
+    'prefix': 'paramref'
+    'body': '<paramref name="${1:Ref name}"/>$2'
+
+  'XML Doc Paramref':
+    'prefix': 'para'
+    'body': '<para>${1:Content}</para>$2'
+
+  'XML Doc Permission':
+    'prefix': 'permission'
+    'body': '<permission cref="${1:Permission type}">${2:Description}</permission>$3'
+
+  # Semantic snippets:
+  'XML Doc Action':
+    'prefix': '///a'
+    'body': '''
+      /// <summary>
+      /// ${1:Action description}
+      /// </summary>
+      /// <param name="${2:Param name}">${3:Param description}</param>$4
+    '''
+
+  'XML Doc Function':
+    'prefix': '///f'
+    'body': '''
+      /// <summary>
+      /// ${1:Function description}
+      /// </summary>
+      /// <param name="${2:Param name}">${3:Param description}</param>
+      /// <returns>
+      /// ${4:Return value description}
+      /// </returns>$5
+    '''
+
+  'XML Doc Prop':
+    'prefix': '///p'
+    'body': '''
+      /// <summary>
+      /// ${1:Property description}
+      /// </summary>
+      /// <value>
+      /// ${2:Property value}
+      /// </value>$3
+    '''
