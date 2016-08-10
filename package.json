@@ -1,6 +1,6 @@
 {
   "name": "xmldoc-snippets",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Atom XML-Doc snippets intended for C#",
   "main": "./index",
   "repository": {
