@@ -50,7 +50,8 @@ result
 ``` csharp
 ///ex
 -----------------------------------------
-/// <exception cref="${1:Exception type}">Thrown when ${2:condition}</exception>$3```
+/// <exception cref="${1:Exception type}">Thrown when ${2:condition}</exception>$3
+```
 
 ``` csharp
 ///sea
